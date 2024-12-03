@@ -1,0 +1,25 @@
+Since the file type and the specific third-party library are not specified, I'll assume it's a JavaScript library. Here's a basic structure for a JavaScript library:
+
+```javascript
+(function(global) {
+    'use strict';
+
+    var ThirdPartyLibrary2 = {};
+
+    ThirdPartyLibrary2.someFunction = function() {
+        // Functionality here
+    };
+
+    ThirdPartyLibrary2.anotherFunction = function() {
+        // Functionality here
+    };
+
+    // Expose the library to the global object
+    if (typeof module !== 'undefined' && module.exports) {
+        module.exports = ThirdPartyLibrary2;
+    } else {
+        global.ThirdPartyLibrary2 = ThirdPartyLibrary2;
+    }
+
+})(this);
+```

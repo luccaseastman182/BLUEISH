@@ -1,0 +1,20 @@
+Since the file type for `Vendor/Third_Party_Library_1` is not specified, I'll assume it's a JavaScript library. Here's a simple example of a JavaScript library that provides a utility function:
+
+```javascript
+(function(global) {
+    'use strict';
+
+    var ThirdPartyLibrary1 = {};
+
+    ThirdPartyLibrary1.utilityFunction = function(param) {
+        // Implement the function logic here
+        console.log('Utility function called with param: ' + param);
+    };
+
+    if (global.ThirdPartyLibrary1) {
+        throw new Error('ThirdPartyLibrary1 is already defined in the global scope');
+    } else {
+        global.ThirdPartyLibrary1 = ThirdPartyLibrary1;
+    }
+})(this);
+```
